@@ -12,6 +12,11 @@ const authentication = require("./Middlewares/authentication");
 
 const app = express();
 app.use(express.json());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Welcome To FullStack Assignment");
@@ -71,5 +76,5 @@ app.listen(7877, async () => {
     console.log("somthing went wrong in server");
     console.log(error);
   }
-  console.log("Running on PORT 2020");
+  console.log("Running on PORT 7877");
 });
