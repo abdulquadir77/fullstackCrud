@@ -63,7 +63,7 @@ app.post("/login", async (req, res) => {
 app.use(authentication);
 app.use("/notes", notesRoute);
 
-app.listen(process.env.port, async () => {
+app.listen(7877, async () => {
   try {
     await connection;
     console.log("connected successfully with db");
